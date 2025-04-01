@@ -52,7 +52,7 @@ INSERT INTO Tentativas (equipe_id, questao_id, resposta, status) VALUES
 1) Ambas as transações tentam modificar os mesmos dados (`A` e `B`), gerando dependências cruzadas.
 2) O grafo de precedência mostra que há um ciclo de dependências entre as transações, o que impede a serialização do escalonamento.
 3) O resultado final de `A = 95` e `B = 60` não pode ser reordenado para um escalonamento serial sem inconsistências.', 
-'CORRETA');
+'PENDENTE');
 
 -- Log de uma transação realizada na questão 4 (Seriabilidade de Escalonamento de Transações)
 INSERT INTO Logs_Testes (equipe_id, questao_id, evento) VALUES
