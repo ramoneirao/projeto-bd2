@@ -25,7 +25,7 @@ INSERT INTO Tentativas (equipe_id, questao_id, resposta, status) VALUES
 (3, 2, 'Executamos dois tipos de escalonamento:
 1) Escalonamento Serial: As transações são executadas uma após a outra, garantindo que cada uma seja completamente finalizada antes da próxima começar. Isso evita concorrência, mas pode reduzir a eficiência.
 2) Escalonamento Equivalente a Serial: As transações são executadas de forma concorrente, mas a ordem final dos commits mantém um resultado equivalente ao de uma execução serial. Isso melhora o desempenho sem comprometer a consistência.', 
-'CORRETA');
+'PENDENTE');
 
 -- Log da execução de escalonamentos na questão 2
 INSERT INTO Logs_Testes (equipe_id, questao_id, evento) VALUES
