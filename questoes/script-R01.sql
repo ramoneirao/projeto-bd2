@@ -31,8 +31,16 @@ SELECT * FROM Alunos;
 INSERT INTO Tentativas (equipe_id, questao_id, resposta, status) VALUES
 (3, 1, 'Executamos duas transações: 
 1) Uma com COMMIT bem-sucedido, garantindo a atomicidade e consistência. 
-2) Uma com erro forçado, resultando em ROLLBACK, provando que dados inconsistentes não foram salvos.', 
-'CORRETA');
+2) Uma com erro forçado, resultando em ROLLBACK, provando que dados inconsistentes não foram salvos.
+Transação com COMMIT bem-sucedido: 
+        Iniciou no estado Active, onde realizou suas operações. 
+        Ao finalizar todas as operações, entrou no estado Partially Committed. 
+        Com o COMMIT bem-sucedido, atingiu o estado Committed, garantindo que todas as mudanças foram permanentemente aplicadas ao banco de dados. 
+Transação com erro forçado e ROLLBACK: 
+        Começou no estado Active, executando operações. 
+        Quando ocorreu o erro, entrou no estado Failed, indicando que não poderia prosseguir. 
+        Com a execução do ROLLBACK, retornou ao estado Aborted, assegurando que nenhuma alteração parcial fosse salva, preservando a integridade dos dados.', 
+'PENDENTE');
 
 -- Log de uma transação realizada na questão 1 (ACID)
 INSERT INTO Logs_Testes (equipe_id, questao_id, evento) VALUES
